@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slides-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 23%;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 1rem;
+  overflow-x: auto;
+  @media (max-width: 768px) {
+    grid-auto-columns: 30%;
+  }
+  @media (max-width: 480px) {
+    grid-auto-columns: 48%;
+  }
+  .slide {
+    scroll-snap-align: start;
+    img {
+      width: 100%;
+    }
+  }
+}
